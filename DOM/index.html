@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM(Document object model)</title>
+</head>
+<body>
+    <!--
+    *Document is using tree data structure like created
+    *using javascript  to access which node 
+
+    Example:
+               Document(root node)
+                    /\
+                   /  \
+                head  body
+                        /\
+                       h1 script
+
+    *adding new things the new child will add
+    
+    -->
+    <h1 id="message"></h1>
+    <script>//javascript to access html in help of document
+       let message=document.getElementById("message")
+       message.innerHTML="Welcome to our website"
+    </script> 
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* Page styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator container */
+#Wrapper {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+#Wrapper h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input section */
+.inputdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+input,
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result box */
+#result {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 6px;
+}

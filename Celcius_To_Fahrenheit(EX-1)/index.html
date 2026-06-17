@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius_To_Fahrenheit(EX-1)</title>
+    <link rel="stylesheet" href="/Celcius_To_Fahrenheit(EX-1)/style.css">
+</head>
+<body>
+     <div id="Wrapper">
+        <h2>Celcius_To_Fahrenheit(EX-1)</h2>
+        <div class="input">
+            <input type="text" id="input" placeholder="Celcius_To_Fahrenheit">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()">Celcius_To_Fahrenheit</button>
+        </div>
+        <div id="result">
+            
+        </div>
+    </div>
+    <script>
+        function convert(){
+        const Celcius=Number(document.getElementById("input").value)
+        const Fahrenheit=1.8*Celcius+32
+        const result=document.getElementById("result")
+        result.innerHTML=Fahrenheit.toFixed(2)+ "°F"//tofixed used to decimal
+        }
+    </script>
+</body>
+</html>
