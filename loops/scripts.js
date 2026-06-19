@@ -64,13 +64,13 @@ for(let fruit of arr){
 }
 
 //for... in->object access
-let tem={
+let item={
 name:"phone",
 quantity:1,
 price:25000
 }
 
 for(let key in item){
-    console.log(key)//name,quality,price
+    console.log(key)//name,quantity,price
     console.log(item[key])//phone,1,25000
 }
