@@ -258,3 +258,74 @@ function outer(){
 }
 outer()//inner variable Butter
 //Outer variable Bread
+
+
+
+
+function outer(){
+    let outerVariable='Bread'
+    function inner(){
+        let innerVariable='Butter'
+        console.log('inner variable:',innerVariable)
+        console.log('outer variable:',outerVariable)
+    }
+    return inner;
+}
+let call=outer()
+call();/*a is 100
+a is 200
+inner variable Butter
+outer variable Bread
+a is 200 */
+
+
+
+function outer(name){
+    let outerVariable='Bread'
+    function inner(){
+        let innerVariable='Butter'
+        console.log('inner variable:',innerVariable)
+        console.log('outer variable:',outerVariable)
+        console.log('hello: ',name)
+    }
+    return inner;
+}
+let call1=outer("Mano")
+call1();/*a is 100
+a is 200
+inner variable Butter
+outer variable Bread
+a is 200 
+hello mano*/
+
+let call2=outer("Mani")
+call2();
+call1();/*a is 100
+a is 200
+inner variable Butter
+outer variable Bread
+a is 200 
+hello mano
+a is 100
+a is 200
+inner variable Butter
+outer variable Bread
+a is 200 
+hello mano*/
+
+
+//this also ok
+function makeAdder(x){
+    return function(y){
+        return x+y
+    }
+}
+let add=makeAdder(5)//This is x variable
+add(10)//This is y=10 variable
+console.log(add(10))//o/p:15
+
+
+let add100=makeAdder(100)
+console.log(add100(45))//o/p:145
+console.log(add100(10))//o/p:110
+console.log(add(5))//o/p:10 old code it is know 
