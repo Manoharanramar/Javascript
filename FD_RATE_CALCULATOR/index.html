@@ -1,0 +1,55 @@
+<!--Fixed Deposit Rate Calculator 
+
+Fd rates
+<3 months: 5.8%
+3-6 months: 6.5%
+7-9 months: 6.8%
+>=10months: 7% 
+
+Get tenure months as input and display FD rate
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Rate Calculator</title>
+    <link rel="stylesheet" href="/LengthConventor/style.css">
+    <link rel="stylesheet" href="/FD_RATE_CALCULATOR/style.css">
+</head>
+<body>
+    <div id="Wrapper">
+        <h2>FD rate calculator</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="Tenure in months">
+        </div>
+        <div>
+            <button type="submit" onclick="fdRate()">Calculate FD Rate</button>
+        </div>
+        <div id="result">
+            
+        </div>
+    </div>
+    <script>
+        function fdRate(){
+            const monthsNumber=Number(document.getElementById("input").value);
+            let rate=0
+            if(monthsNumber<3){
+               rate=5.8
+            }
+            else if(monthsNumber>=3 && monthsNumber<=6){
+                rate=6.5
+            }
+            else if(monthsNumber>=7 && monthsNumber<=9){
+                rate=6.8
+            }
+            else{
+                rate=7
+            }
+            let result=document.getElementById("result")
+            result.innerHTML="your interest rate is "+rate+"%"
+
+        }
+    </script>
+</body>
+</html>

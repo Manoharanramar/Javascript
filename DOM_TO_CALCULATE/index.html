@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character_calculator</title>
+    <link rel="stylesheet" href="/DOM_TO_CALCULATE/style.css">
+</head>
+<body>
+    <div id="Wrapper">
+        <h2>Character Calculator</h2>
+        <div class="input">
+            <input type="text" id="input" placeholder="Enter a string">
+        </div>
+        <div>
+            <button type="submit" onclick="countCharacters()">Count Characters</button>
+        </div>
+        <div id="result">
+            
+        </div>
+
+        <script>
+            function countCharacters(){
+                const inputstring=document.getElementById("input").value
+                const characterCount=inputstring.length
+                const result=document.getElementById("result")
+                result.innerHTML="The number of characters in the string is: "+
+                characterCount
+            } 
+        </script>
+</body>
+</html>
