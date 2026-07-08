@@ -1,0 +1,65 @@
+<!--Exercise 7:
+EB bill amount calculator
+Units consumed:
+For first 50 units RS.0.75/unit
+For next 100 units RS.1.00/unit
+For next 100 units RS.1.30/unit
+For units above 250 RS.1.50/unit
+
+Input-75
+output-62.5
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB Bill Amount Calculator</title>
+    <link rel="stylesheet" href="/EB_BILL_AMOUNT_CALCULATOR/style.css">
+</head>
+<body>
+    <div id="Wrapper">
+        <h2>EB Bill Amount Calculator</h2>
+        <div class="input">
+            <input type="text" id="input" placeholder="Enter units consumed">
+        </div>
+        <div>
+            <button type="submit" onclick="calculateBill()">Calculate Bill</button>
+        </div>
+        <div id="result">
+            
+        </div>
+    </div>
+    <script>
+        function calculateBill() {
+        const unitsConsumed = Number(document.getElementById("input").value);
+        let billAmount = 0;
+        const result = document.getElementById("result");
+
+        if (unitsConsumed <= 50) {
+        billAmount = unitsConsumed * 0.75;
+        }
+        else if (unitsConsumed <= 150) {
+            billAmount =
+            (50 * 0.75) +
+            ((unitsConsumed - 50) * 1.00);
+        } 
+        else if (unitsConsumed <= 250) {
+        billAmount =
+            (50 * 0.75) +
+            (100 * 1.00) +
+            ((unitsConsumed - 150) * 1.30);
+        } 
+        else {
+        billAmount =
+            (50 * 0.75) +
+            (100 * 1.00) +
+            (100 * 1.30) +
+            ((unitsConsumed - 250) * 1.50);
+        }
+        result.innerHTML = "Your Bill Amount is: ₹" + billAmount.toFixed(2);
+    }
+    </script>
+</body>
+</html>

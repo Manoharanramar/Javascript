@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with Radio Buttons</title>
+    <link rel="stylesheet" href="/Using_Radio_button/style.css">
+</head>
+<body>
+
+    <div id="Wrapper">
+        <h2>Simple Calculator</h2>
+
+        <input type="number" id="input1" placeholder="First Number">
+        <br><br>
+
+        <input type="number" id="input2" placeholder="Second Number">
+        <br><br>
+
+        <label>
+            <input type="radio" name="operation" value="+" checked> +
+        </label>
+
+        <label>
+            <input type="radio" name="operation" value="-"> -
+        </label>
+
+        <label>
+            <input type="radio" name="operation" value="*"> *
+        </label>
+
+        <label>
+            <input type="radio" name="operation" value="/"> /
+        </label>
+
+        <br><br>
+
+        <button>Calculate</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
